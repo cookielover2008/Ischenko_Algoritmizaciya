@@ -1,7 +1,7 @@
 #  Найти сумму N^2 + (N + 1)^2 + (N + 2)^2 + ... + (2N)^2.
 
 numb = input('Введите N (N > 0): ')# пользователь вводит число
-while type(numb) != int:                   # обработка исключений для month
+while type(numb) != int:                   # обработка исключений для n
     try:
         numb = int(numb)
     except ValueError:
