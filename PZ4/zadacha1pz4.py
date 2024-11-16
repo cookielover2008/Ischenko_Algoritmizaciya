@@ -11,7 +11,7 @@ totalsum = 0
 if numb > 0:                                     # случай, когда n > 0
     sum1 = numb ** 2                             # вычисляем первое число
     sum2 = (2 * numb) ** 2                       # вычисляем последнее число
-    for i in range(1, numb + 1):                 # цикл для промежуточных вычислений
+    for i in range(1, numb):                 # цикл для промежуточных вычислений
         summa = (numb + i) ** 2
         totalsum += summa
     print(totalsum + sum1 + sum2)
