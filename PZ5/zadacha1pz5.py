@@ -1,18 +1,18 @@
-def summa_cyfr(n):
-    return sum(int(digit) for digit in str(n))
-def shagi_do_zero(n):
-    shagi = 0
-    while n > 0:
-        n -= summa_cyfr(n)
-        shagi += 1
-    return shagi
-
-n = input('Введите число N: ')
-while type(a) != int:                   # обработка исключений для N
-    try:
-        a = int(a)
-    except ValueError:
-        print("Неправильно ввели!")
-        a = input("Введите A заново: ")
-rezultat = shagi_do_zero(n)           
-print('Количество шагов до нуля: ', rezultat)
+def shagi_to_zero(n):
+    steps = 0
+    while n > 0:        
+        summa_cifr = 0                   # Вычисляем сумму цифр
+        for cifra in str(n):            # Проходим по каждой цифре числа
+            summa_cifr += int(cifra)    # Превращаем цифру в число и добавляем к сумме
+        n -= summa_cifr                 # Вычитаем сумму цифр из числа
+        steps += 1                      # Увеличиваем счетчик шагов
+    return steps
+N = input("Введите число N: ")          # Ввод N
+while type(N) != int:                   # обработка исключений для N
+        try:
+            N = int(N)
+        except ValueError:
+            print("Неправильно ввели!")
+            N = input("Введи N заново: ")
+result = shagi_to_zero(N) 
+print("Количество шагов, необходимых для достижения нуля:", result)  # Выводим результат
