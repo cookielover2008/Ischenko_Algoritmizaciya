@@ -33,12 +33,9 @@ while type(d) != int:
     except ValueError:
         print('Неправильно ввели!')
         d = input("Введи D заново: ")
-
-
 min1, max1 = Minmax(a, b)  # Минимум и максимум для A и B
 min2, max2 = Minmax(c, d)  # Минимум и максимум для C и D
 samoe_minimalnoe, zub_dayu = Minmax(min1, min2)  # Минимум из двух минимальных значений
 zub_dayu, samoe_maximalnoe = Minmax(max1, max2)  # Максимум из двух максимальных значений
-
 print('Минимальное число: ', samoe_minimalnoe)
 print('Максимальное число: ', samoe_maximalnoe)
