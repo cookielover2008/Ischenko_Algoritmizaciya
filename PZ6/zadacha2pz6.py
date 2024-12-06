@@ -2,7 +2,7 @@
 #(то есть участков, на которых его элементы возрастают или убывают).
 def schitaem_ciferki(spisok):
     if len(spisok) < 2:
-        return 0
+        return []
     
 
     schet = 0           # Cчётчик промежутков монотонности    
