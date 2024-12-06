@@ -7,17 +7,17 @@ def schitaem_ciferki(spisok):
     povishenie = None  # Задаем начальное состояние
 
     for i in range(1, len(spisok)):
-        if spisok[i] > spisok[i - 1]:  # Если текущий элемент больше предыдущего
-            if povishenie is False:  # Если до этого был убывающий участок
+        if spisok[i] > spisok[i - 1]:          # Если текущий элемент больше предыдущего
+            if povishenie is False:            # Если до этого был убывающий участок
                 schet += 1
-            povishenie = True  # Устанавливаем состояние как возрастающее
-        elif spisok[i] < spisok[i - 1]:  # Если текущий элемент меньше предыдущего
-            if povishenie is True:  # Если до этого был возрастающий участок
+            povishenie = True                  # Устанавливаем состояние как возрастающее
+        elif spisok[i] < spisok[i - 1]:        # Если текущий элемент меньше предыдущего
+            if povishenie is True:             # Если до этого был возрастающий участок
                 schet += 1
-            povishenie = False  # Устанавливаем состояние как убывающее
+            povishenie = False                 # Устанавливаем состояние как убывающее
 
-    # Учитываем последний участок, если он существует и не равен None
-    if povishenie is not None:
+    
+    if povishenie is not None:                # Учитываем последний участок, если он существует и не равен None
         schet += 1
 
     return schet
