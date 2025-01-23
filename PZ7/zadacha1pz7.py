@@ -4,7 +4,7 @@ originalnaya_strochka = input("Введите строку: ")       # ввод 
 
 
 perevernutaya_strochka = ''                             # создаем новую пустую строку, в которую будем записывать символы
-for bukva in originalnaya_strochka:                     # берем каждый символ из строчки, добавляем в новую пустую строку, каждый следующий символ строки записывается вначале новой строки
+for bukva in originalnaya_strochka:                     # берем каждый символ из строчки, добавляем в новую пустую строку, каждый следующий символ строки записывается в начале новой строки
     perevernutaya_strochka = bukva + perevernutaya_strochka      
 
 
