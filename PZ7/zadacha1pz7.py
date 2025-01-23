@@ -1,10 +1,11 @@
-# Запрос строки от пользователя
-originalnaya_strochka = input("Введите строку: ")
+# Дана строка. Вывести строку, содержащую те же символы, но расположенные в обратном порядке.
 
-# Разворот строки с явным циклом
-perevernutaya_strochka = ''
-for bukva in originalnaya_strochka:
-    perevernutaya_strochka = bukva + perevernutaya_strochka
+originalnaya_strochka = input("Введите строку: ")       # ввод строки пользователем
 
-# Вывод результирующей строки
-print("Строка в обратном порядке:", perevernutaya_strochka)
+
+perevernutaya_strochka = ''                             # создаем новую пустую строку, в которую будем записывать символы
+for bukva in originalnaya_strochka:                     # берем каждый символ из строчки, добавляем в новую пустую строку, каждый следующий символ строки записывается вначале новой строки
+    perevernutaya_strochka = bukva + perevernutaya_strochka      
+
+
+print("Строка в обратном порядке:", perevernutaya_strochka)     # вывод результата
